@@ -10824,3 +10824,17 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+.image-gallery {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.scrolling-container {
+  display: inline-flex;
+}
+
+.card-img-top {
+  width: 600px; /* 이미지의 폭 설정 (원하는 크기로 조절) */
+  margin-right: 10px; /* 이미지 사이 간격 설정 */
+}
