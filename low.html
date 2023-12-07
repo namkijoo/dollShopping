@@ -22,9 +22,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="high.html">인형(대)</a></li>
-                        <li class="nav-item"><a class="nav-link " href="middle.html">인형(중)</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="low.html">인형(소)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="high.html">대형 인형</a></li>
+                        <li class="nav-item"><a class="nav-link" href="middle.html">중형 인형</a></li>
+                        <li class="nav-item"><a class="nav-link" href="low.html">소형 인형(키링 포함)</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,143 +58,126 @@
 // Define an array of products
 const products = [
     {
-        name: "냐한 남자 나비, 영철 월드컵 에디션 인형(25cm)",
+        name: "피카츄",
         price: "5000원",
-        imageSrc: "img/wordcup.jpg",
-        link: "html/wordcup.html"
+        imageSrc: "img/pokemon.jpg",
+        link: "html/pokemon.html"
     },
     {
-        name: "춘식이 꿈나라 필로우(28cm)",
+        name: "도라에몽",
         price: "5000원",
-        imageSrc: "img/choonsik.jpg",
-        link: "html/choosik.html"
+        imageSrc: "img/doraemong.jpg",
+        link: "html/doraemong.html"
     },
     {
-        name: "찜질방 코우펜짱(20cm)",
+        name: "포차코",
         price: "5000원",
-        imageSrc: "img/penguin.jpg",
-        link: "html/penguin.html"
+        imageSrc: "img/pochaco.jpg",
+        link: "html/pochaco.html"
     },
     {
-        name: "맹구(29cm)",
+        name: "포키",
         price: "5000원",
-        imageSrc: "img/mangu.jpg",
-        link: "html/mangu.html"
+        imageSrc: "img/poki.jpg",
+        link: "html/poki.html"
     },
     {
-        name: "흰둥이(25cm)",
+        name: "뚱이",
         price: "5000원",
-        imageSrc: "img/whiteDog.jpg",
-        link: "html/whiteDog.html"
+        imageSrc: "img/ddong.jpg",
+        link: "html/ddong.html"
     },
     {
-        name: "아기 병아리 인형(28cm)",
+        name: "메타몽",
         price: "5000원",
-        imageSrc: "img/chicken.jpg",
-        link: "html/chicken.html"
+        imageSrc: "img/metamong.jpg",
+        link: "html/metamong.html"
     },
     {
-        name: "뭉뭉이 연필꽂이 인형(25cm)",
+        name: "몰랑 뽀송 인형",
         price: "5000원",
-        imageSrc: "img/mongmong.jpg",
-        link: "html/mongmong.html"
+        imageSrc: "img/bbosong.jpg",
+        link: "html/bbosong.html"
     },
     {
-        name: "푸바오 친구 판다 인형(25cm)",
+        name: "턱시도 테드",
         price: "5000원",
-        imageSrc: "img/panda.jpg",
-        link: "html/panda.html"
+        imageSrc: "img/ted.jpg",
+        link: "html/ted.html"
     },
     {
-        name: "뭉뭉이 라임독 인형(35cm)",
+        name: "짱구",
         price: "5000원",
-        imageSrc: "img/mong.jpg",
-        link: "html/mong.html"
+        imageSrc: "img/jjangu.jpg",
+        link: "html/jjangu.html"
     },
     {
-        name: "노블 래빗 토끼 인형(핑크-30cm)",
+        name: "구데타마",
         price: "5000원",
-        imageSrc: "img/pinkRabbit.jpg",
-        link: "html/pinkRabbit.html"
+        imageSrc: "img/gudetama.jpg",
+        link: "html/gudetama.html"
     },
     {
-        name: "노블 래빗 토끼 인형(흰색-30cm)",
+        name: "옐로우 앵그리 버드",
         price: "5000원",
-        imageSrc: "img/whiteRabbit.jpg",
-        link: "html/whiteRabbit.html"
+        imageSrc: "img/angrybird.jpg",
+        link: "html/angrybird.html"
     },
     {
-        name: "케어베어 트루하트(핑크-35cm)",
+        name: "케어베어",
         price: "5000원",
-        imageSrc: "img/carebear1.jpg",
-        link: "html/bear2.html"
+        imageSrc: "img/minicarebear.jpg",
+        link: "html/minicarebear.html"
     },
     {
-        name: "케어베어 드림 브라이트(퍼플-35cm)",
+        name: "흰색 노블래빗",
         price: "5000원",
-        imageSrc: "img/carebear2.jpg",
-        link: "html/carebear2.html"
+        imageSrc: "img/miniRabbit1.jpg",
+        link: "html/miniRabbit1.html"
     },
     {
-        name: "뚱카 쿼카 인형(25cm)",
+        name: "핑크 노블래빗",
         price: "5000원",
-        imageSrc: "img/quaka.jpg",
-        link: "html/quaka.html"
+        imageSrc: "img/miniRabbit2.jpg",
+        link: "html/miniRabbit2.html"
     },
     {
-        name: "이오르 모찌 인형",
+        name: "쿠로미",
         price: "5000원",
-        imageSrc: "img/donky.jpg",
-        link: "html/donky.html"
+        imageSrc: "img/curomi.jpg",
+        link: "html/curomi.html"
     },
     {
-        name: "오로라 공룡, 곰돌이 인형",
+        name: "나무 늘보",
         price: "5000원",
-        imageSrc: "img/dino.jpg",
-        link: "html/dino.html"
+        imageSrc: "img/lazy.jpg",
+        link: "html/lazy.html"
     },
     {
-        name: "토피치 토끼 인형(25cm)",
+        name: "요리사 그로밋",
         price: "5000원",
-        imageSrc: "img/peachRabbit.jpg",
-        link: "html/peachRabbit.html"
+        imageSrc: "img/gromit.jpg",
+        link: "html/gromit.html"
     },
     {
-        name: "쿼카 엄마 아기 인형(26cm)",
+        name: "잎사귀 쿼카",
         price: "5000원",
-        imageSrc: "img/quaka2.jpg",
-        link: "html/quaka2.html"
+        imageSrc: "img/miniquaka.jpg",
+        link: "html/miniquaka.html"
     },
     {
-        name: "냐한 남자 나비, 영철 월드컵 에디션 인형(25cm)",
+        name: "원피스 쵸파(광대 버기 코스튬)",
         price: "5000원",
-        imageSrc: "img/wordcup.jpg",
-        link: "html/wordcup.html"
+        imageSrc: "img/choppa.jpg",
+        link: "html/choppa.html"
     },
     {
-        name: "오징어 게임 삼총사 인형(25cm)",
+        name: "모찌 시바견",
         price: "5000원",
-        imageSrc: "img/squid.jpg",
-        link: "html/squid.html"
+        imageSrc: "img/mozzi.jpg",
+        link: "html/mozzi.html"
     },
-    {
-        name: "익명이 대형 모찌 인형(55cm)",
-        price: "5000원",
-        imageSrc: "img/noname.jpg",
-        link: "html/noname.html"
-    },
-    {
-        name: "시나모롤 프렌즈 대형 인형(55cm)",
-        price: "5000원",
-        imageSrc: "img/sinamorol.jpg",
-        link: "html/sinamorol.html"
-    },
-    {
-        name: "숀 대형 인형(45cm)",
-        price: "5000원",
-        imageSrc: "img/shown.jpg",
-        link: "html/shown.html"
-    },
+    
     // Add more products as needed
 ];
 
