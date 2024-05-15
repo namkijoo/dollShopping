@@ -1,394 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>DOLL SHOP</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">DOLL SHOP</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="high.html">대형 인형</a></li>
-                        <li class="nav-item"><a class="nav-link" href="middle.html">중형 인형</a></li>
-                        <li class="nav-item"><a class="nav-link" href="low.html">소형 인형(키링 포함)</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">DOLL SHOP</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">어디에도 없는 전국 최저가 인형 판매</p>
-                </div>
-            </div>
-        </header>
-        <!-- Section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="productContainer">
-                        
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script>
-// Define an array of products
-const products = [
-    {
-        name: "냐한 남자 나비, 영철 월드컵 에디션 인형(25cm)",
-        price: "14000원",
-        imageSrc: "img/wordcup.jpg",
-        link: "html/wordcup.html"
-    },
-    {
-        name: "춘식이 꿈나라 필로우(28cm)",
-        price: "11000원",
-        imageSrc: "img/choonsik.jpg",
-        link: "html/choonsik.html"
-    },
-    {
-        name: "찜질방 코우펜짱(20cm)",
-        price: "9000원",
-        imageSrc: "img/penguin.jpg",
-        link: "html/penguin.html"
-    },
-    {
-        name: "맹구(29cm)",
-        price: "9000원",
-        imageSrc: "img/mangu.jpg",
-        link: "html/mangu.html"
-    },
-    {
-        name: "아기 병아리 인형(28cm)",
-        price: "7000원",
-        imageSrc: "img/chicken.jpg",
-        link: "html/chicken.html"
-    },
-    
-    {
-        name: "케어베어 드림 브라이트(퍼플-35cm)",
-        price: "7000원",
-        imageSrc: "img/carebear2.jpg",
-        link: "html/carebear2.html"
-    },
-    
-    
-    
-    
-    {
-        name: "냐한 남자 춘배 오리인형(25cm)",
-        price: "12000원",
-        imageSrc: "img/choonbae.jpg",
-        link: "html/choonbae.html"
-    },
-    {
-        name: "오징어 게임 삼총사 세트(25cm)",
-        price: "10000원",
-        imageSrc: "img/squid.jpg",
-        link: "html/squid.html"
-    },
-    {
-        name: "익명이 대형 모찌 인형(55cm)",
-        price: "17000원",
-        imageSrc: "img/noname.jpg",
-        link: "html/noname.html"
-    },
-    {
-        name: "라잉 마시마로 인형(20cm)",
-        price: "11000원",
-        imageSrc: "img/mashmaro.jpg",
-        link: "html/mashmaro.html"
-    },
-    {
-        name: "핑크 코우펜짱(20cm)",
-        price: "9000원",
-        imageSrc: "img/penguin2.jpg",
-        link: "html/penguin2.html"
-    },
-    {
-        name: "도라에몽 모찌 인형(30cm)",
-        price: "11000원",
-        imageSrc: "img/bigdoraemong.jpg",
-        link: "html/bigdoraemong.html"
-    },
-    {
-        name: "소프트 뚜니 토끼 인형(35cm)",
-        price: "9000원",
-        imageSrc: "img/greenRabbit.jpg",
-        link: "html/greenRabbit.html"
-    },
-    {
-        name: "피카츄(정품-12cm)",
-        price: "4000원",
-        imageSrc: "img/pokemon.jpg",
-        link: "html/pokemon.html"
-    },
-    {
-        name: "도라에몽(정품)",
-        price: "4000원",
-        imageSrc: "img/doraemong.jpg",
-        link: "html/doraemong.html"
-    },
-    {
-        name: "산리오 포차코(정품)",
-        price: "5000원",
-        imageSrc: "img/pochaco.jpg",
-        link: "html/pochaco.html"
-    },
-    {
-        name: "토이스토리 포키(정품)",
-        price: "3000원",
-        imageSrc: "img/poki.jpg",
-        link: "html/poki.html"
-    },
-    {
-        name: "메타몽",
-        price: "4000원",
-        imageSrc: "img/metamong.jpg",
-        link: "html/metamong.html"
-    },
-    {
-        name: "몰랑 뽀송 인형",
-        price: "2000원",
-        imageSrc: "img/bbosong.jpg",
-        link: "html/bbosong.html"
-    },
-    {
-        name: "턱시도 테드(정품)",
-        price: "4000원",
-        imageSrc: "img/ted.jpg",
-        link: "html/ted.html"
-    },
-    {
-        name: "가방 맨 짱구(정품)",
-        price: "5000원",
-        imageSrc: "img/jjangu.jpg",
-        link: "html/jjangu.html"
-    },
-    {
-        name: "구데타마(정품)",
-        price: "2000원",
-        imageSrc: "img/gudetama.jpg",
-        link: "html/gudetama.html"
-    },
-    {
-        name: "옐로우 앵그리 버드(정품)",
-        price: "2000원",
-        imageSrc: "img/angrybird.jpg",
-        link: "html/angrybird.html"
-    },
-    {
-        name: "산리오 쿠로미",
-        price: "4000원",
-        imageSrc: "img/curomi.jpg",
-        link: "html/curomi.html"
-    },
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>DOLL SHOP</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">DOLL SHOP</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="high.html">대형 인형</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="middle.html">중형 인형</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="low.html">소형 인형(키링 포함)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+      <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">DOLL SHOP</h1>
+          <p class="lead fw-normal text-white-50 mb-0">
+            어디에도 없는 전국 최저가 인형 판매
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- Section-->
+    <section class="py-5">
+      <div class="container px-4 px-lg-5 mt-5">
+        <div
+          class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
+          id="productContainer"
+        ></div>
+      </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; Your Website 2023
+        </p>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+      // Define an array of products
+      const products = [
+        {
+          name: "냐한 남자 나비, 영철 월드컵 에디션 인형(25cm)",
+          price: "14000원",
+          imageSrc: "img/wordcup.jpg",
+          link: "html/wordcup.html",
+        },
 
-    {
-        name: "요리사 그로밋",
-        price: "6000원",
-        imageSrc: "img/gromit.jpg",
-        link: "html/gromit.html"
-    },
-    {
-        name: "잎사귀 쿼카",
-        price: "4000원",
-        imageSrc: "img/miniquaka.jpg",
-        link: "html/miniquaka.html"
-    },
-    {
-        name: "원피스 쵸파(광대 버기 코스튬)",
-        price: "3000원",
-        imageSrc: "img/choppa.jpg",
-        link: "html/choppa.html"
-    },
-    {
-        name: "모찌 시바견",
-        price: "3000원",
-        imageSrc: "img/mozzi.jpg",
-        link: "html/mozzi.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "8000원",
-        imageSrc: "img/sinamorol2.png",
-        link: "#"
-    },
-    {
-        name: "SOLD OUT",
-        price: "8000원",
-        imageSrc: "img/mong.jpg",
-        link: "#"
-    },
-    
-    {
-        name: "SOLD OUT",
-        price: "7000원",
-        imageSrc: "img/mongmong.jpg",
-        link: "#"
-    },
-    {
-        name: "SOLD OUT",
-        price: "3000원",
-        imageSrc: "img/minicarebear.jpg",
-        link: "#"
-    },
-    {
-        name: "SOLD OUT",
-        price: "5000원",
-        imageSrc: "img/miniRabbit1.jpg",
-        link: "#"
-    },
-    {
-        name: "SOLD OUT",
-        price: "3000원",
-        imageSrc: "img/duck.jpg",
-        link: "#"
-    },
-    {
-        name: "SOLD OUT",
-        price: "7000원",
-        imageSrc: "img/pinkRabbit.jpg",
-        link: "#"
-    },
-    {
-        name: "SOLD OUT",
-        price: "7000원",
-        imageSrc: "img/whiteRabbit.jpg",
-        link: "#"
-    },
-    {
-        name: "SOLD OUT",
-        price: "5000원",
-        imageSrc: "img/miniRabbit2.jpg",
-        link: "#"
-    },
-    {
-        name: "SOLD OUT",
-        price: "4000원",
-        imageSrc: "img/ddong.jpg",
-        link: "#"
-    },
-    {
-        name: "SOLD OUT",
-        price: "25000원",
-        imageSrc: "img/sinamorol.jpg",
-        link: "#"
-    },
-    {
-        name: "SOLD OUT",
-        price: "9000원",
-        imageSrc: "img/whiteDog.jpg",
-        link: "html/whiteDog.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "13000원",
-        imageSrc: "img/shown.jpg",
-        link: "html/shown.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "7000원",
-        imageSrc: "img/bbo.jpg",
-        link: "html/bbo.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "7000원",
-        imageSrc: "img/carebear1.jpg",
-        link: "html/carebear1.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "6000원",
-        imageSrc: "img/dino.jpg",
-        link: "html/dino.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "10000원",
-        imageSrc: "img/quaka.jpg",
-        link: "html/quaka.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "7000원",
-        imageSrc: "img/quaka2.jpg",
-        link: "html/quaka2.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "7000원",
-        imageSrc: "img/quaka3.jpg",
-        link: "html/quaka3.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "6000원",
-        imageSrc: "img/peachRabbit.jpg",
-        link: "html/peachRabbit.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "7000원",
-        imageSrc: "img/donky.jpg",
-        link: "html/donky.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "10000원",
-        imageSrc: "img/minigromit.jpg",
-        link: "html/minigromit.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "3000원",
-        imageSrc: "img/lazy.jpg",
-        link: "html/lazy.html"
-    },
-    {
-        name: "SOLD OUT",
-        price: "8000원",
-        imageSrc: "img/panda.jpg",
-        link: "html/panda.html"
-    },
-    // Add more products as needed
-];
+        {
+          name: "찜질방 코우펜짱(20cm)",
+          price: "9000원",
+          imageSrc: "img/penguin.jpg",
+          link: "html/penguin.html",
+        },
 
-// Get the container element where products will be appended
-const productContainer = document.getElementById('productContainer');
+        {
+          name: "아기 병아리 인형(28cm)",
+          price: "7000원",
+          imageSrc: "img/chicken.jpg",
+          link: "html/chicken.html",
+        },
 
-// Loop through the products array and generate HTML for each product
-products.forEach(product => {
-    // Create a new product element
-    const productElement = document.createElement('div');
-    productElement.className = 'col mb-5';
-    
-    productElement.innerHTML = `
+        {
+          name: "라잉 마시마로 인형(20cm)",
+          price: "11000원",
+          imageSrc: "img/mashmaro.jpg",
+          link: "html/mashmaro.html",
+        },
+        {
+          name: "핑크 코우펜짱(20cm)",
+          price: "9000원",
+          imageSrc: "img/penguin2.jpg",
+          link: "html/penguin2.html",
+        },
+
+        {
+          name: "도라에몽(정품)",
+          price: "4000원",
+          imageSrc: "img/doraemong.jpg",
+          link: "html/doraemong.html",
+        },
+        {
+          name: "산리오 포차코(정품)",
+          price: "5000원",
+          imageSrc: "img/pochaco.jpg",
+          link: "html/pochaco.html",
+        },
+
+        {
+          name: "몰랑 뽀송 인형",
+          price: "2000원",
+          imageSrc: "img/bbosong.jpg",
+          link: "html/bbosong.html",
+        },
+        {
+          name: "턱시도 테드(정품)",
+          price: "4000원",
+          imageSrc: "img/ted.jpg",
+          link: "html/ted.html",
+        },
+        {
+          name: "가방 맨 짱구(정품)",
+          price: "5000원",
+          imageSrc: "img/jjangu.jpg",
+          link: "html/jjangu.html",
+        },
+        {
+          name: "구데타마(정품)",
+          price: "2000원",
+          imageSrc: "img/gudetama.jpg",
+          link: "html/gudetama.html",
+        },
+        {
+          name: "옐로우 앵그리 버드(정품)",
+          price: "2000원",
+          imageSrc: "img/angrybird.jpg",
+          link: "html/angrybird.html",
+        },
+        {
+          name: "산리오 쿠로미",
+          price: "4000원",
+          imageSrc: "img/curomi.jpg",
+          link: "html/curomi.html",
+        },
+
+        {
+          name: "잎사귀 쿼카",
+          price: "4000원",
+          imageSrc: "img/miniquaka.jpg",
+          link: "html/miniquaka.html",
+        },
+        {
+          name: "원피스 쵸파(광대 버기 코스튬)",
+          price: "3000원",
+          imageSrc: "img/choppa.jpg",
+          link: "html/choppa.html",
+        },
+        {
+          name: "모찌 시바견",
+          price: "3000원",
+          imageSrc: "img/mozzi.jpg",
+          link: "html/mozzi.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "8000원",
+          imageSrc: "img/sinamorol2.png",
+          link: "#",
+        },
+        {
+          name: "SOLD OUT",
+          price: "8000원",
+          imageSrc: "img/mong.jpg",
+          link: "#",
+        },
+
+        {
+          name: "SOLD OUT",
+          price: "7000원",
+          imageSrc: "img/mongmong.jpg",
+          link: "#",
+        },
+        {
+          name: "SOLD OUT",
+          price: "3000원",
+          imageSrc: "img/minicarebear.jpg",
+          link: "#",
+        },
+        {
+          name: "SOLD OUT",
+          price: "5000원",
+          imageSrc: "img/miniRabbit1.jpg",
+          link: "#",
+        },
+        {
+          name: "SOLD OUT",
+          price: "3000원",
+          imageSrc: "img/duck.jpg",
+          link: "#",
+        },
+        {
+          name: "SOLD OUT",
+          price: "7000원",
+          imageSrc: "img/pinkRabbit.jpg",
+          link: "#",
+        },
+        {
+          name: "SOLD OUT",
+          price: "7000원",
+          imageSrc: "img/whiteRabbit.jpg",
+          link: "#",
+        },
+        {
+          name: "SOLD OUT",
+          price: "5000원",
+          imageSrc: "img/miniRabbit2.jpg",
+          link: "#",
+        },
+        {
+          name: "SOLD OUT",
+          price: "4000원",
+          imageSrc: "img/ddong.jpg",
+          link: "#",
+        },
+        {
+          name: "SOLD OUT",
+          price: "25000원",
+          imageSrc: "img/sinamorol.jpg",
+          link: "#",
+        },
+        {
+          name: "SOLD OUT",
+          price: "9000원",
+          imageSrc: "img/whiteDog.jpg",
+          link: "html/whiteDog.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "13000원",
+          imageSrc: "img/shown.jpg",
+          link: "html/shown.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "7000원",
+          imageSrc: "img/bbo.jpg",
+          link: "html/bbo.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "7000원",
+          imageSrc: "img/carebear1.jpg",
+          link: "html/carebear1.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "6000원",
+          imageSrc: "img/dino.jpg",
+          link: "html/dino.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "10000원",
+          imageSrc: "img/quaka.jpg",
+          link: "html/quaka.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "7000원",
+          imageSrc: "img/quaka2.jpg",
+          link: "html/quaka2.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "7000원",
+          imageSrc: "img/quaka3.jpg",
+          link: "html/quaka3.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "6000원",
+          imageSrc: "img/peachRabbit.jpg",
+          link: "html/peachRabbit.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "7000원",
+          imageSrc: "img/donky.jpg",
+          link: "html/donky.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "10000원",
+          imageSrc: "img/minigromit.jpg",
+          link: "html/minigromit.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "3000원",
+          imageSrc: "img/lazy.jpg",
+          link: "html/lazy.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "8000원",
+          imageSrc: "img/panda.jpg",
+          link: "html/panda.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "6000원",
+          imageSrc: "img/gromit.jpg",
+          link: "html/gromit.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "3000원",
+          imageSrc: "img/poki.jpg",
+          link: "html/poki.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "4000원",
+          imageSrc: "img/metamong.jpg",
+          link: "html/metamong.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "11000원",
+          imageSrc: "img/bigdoraemong.jpg",
+          link: "html/bigdoraemong.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "9000원",
+          imageSrc: "img/greenRabbit.jpg",
+          link: "html/greenRabbit.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "4000원",
+          imageSrc: "img/pokemon.jpg",
+          link: "html/pokemon.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "12000원",
+          imageSrc: "img/choonbae.jpg",
+          link: "html/choonbae.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "10000원",
+          imageSrc: "img/squid.jpg",
+          link: "html/squid.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "17000원",
+          imageSrc: "img/noname.jpg",
+          link: "html/noname.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "7000원",
+          imageSrc: "img/carebear2.jpg",
+          link: "html/carebear2.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "11000원",
+          imageSrc: "img/choonsik.jpg",
+          link: "html/choonsik.html",
+        },
+        {
+          name: "SOLD OUT",
+          price: "9000원",
+          imageSrc: "img/mangu.jpg",
+          link: "html/mangu.html",
+        },
+        // Add more products as needed
+      ];
+
+      // Get the container element where products will be appended
+      const productContainer = document.getElementById("productContainer");
+
+      // Loop through the products array and generate HTML for each product
+      products.forEach((product) => {
+        // Create a new product element
+        const productElement = document.createElement("div");
+        productElement.className = "col mb-5";
+
+        productElement.innerHTML = `
         <div class="card h-100">
             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
             <img class="card-img-top" src="${product.imageSrc}" alt="..." />
@@ -404,9 +437,9 @@ products.forEach(product => {
         </div>
     `;
 
-    // Append the product element to the container
-    productContainer.appendChild(productElement);
-});
-</script>
-    </body>
+        // Append the product element to the container
+        productContainer.appendChild(productElement);
+      });
+    </script>
+  </body>
 </html>
